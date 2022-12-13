@@ -7,4 +7,5 @@ export default class EnvInputs {
   ado_active_state: string = 'Active'
   ado_area_path: string = ''
   github_token: string = ''
+  ado_assigned_to: string = ''
 }

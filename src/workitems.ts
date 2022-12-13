@@ -93,6 +93,11 @@ export async function create(env: EnvInputs, payload: Payload): Promise<IFetchRe
       value: `GitHub <a href="${payload.url}" target="_new">Pull Request #${payload.number}</a> created in <a href="${payload.repo_url}" target="_new">${payload.repo_fullname}</a>`
     },
     {
+      "op": "add",
+      "path": "/fields/System.AssignedTo",
+      "value": env.ado_assigned_to
+    },
+    {
       op: 'add',
       path: '/relations/-',
       value: {

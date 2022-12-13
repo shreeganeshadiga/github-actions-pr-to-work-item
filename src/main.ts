@@ -21,6 +21,7 @@ const ado_active_state = 'Active'
 const ado_close_state = 'Close'
 const github_token = '{github token}'
 const ado_area_path = ''
+const ado_assigned_to = '{assigned to}'
 
 // prettier-ignore
 function getEnvInputs(): EnvInputs {
@@ -34,6 +35,7 @@ function getEnvInputs(): EnvInputs {
   env.ado_active_state = process.env['ado_active_state'] !== undefined ? process.env['ado_active_state'] : ado_active_state
   env.github_token = process.env['github_token'] !== undefined ? process.env['github_token'] : github_token
   env.ado_area_path = process.env['ado_area_path'] !== undefined ? process.env['ado_area_path'] : ado_area_path  
+  env.ado_assigned_to = process.env['ado_assigned_to'] !== undefined ? process.env['ado_assigned_to'] : ado_assigned_to
   if (! verbose_logging) verbose_logging = process.env['debug'] !== undefined ? true : false
 
   if (!env.ado_token) { console.log('  Missing ado_token value') } 
