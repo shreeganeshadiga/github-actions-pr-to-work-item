@@ -142,7 +142,7 @@ export async function create(env: EnvInputs, payload: Payload): Promise<IFetchRe
     patchDocument.push({
       op: 'add',
       path: '/fields/System.AssignedTo',
-      value: env.ado_assigned_to
+      value: 'Shreeganesh, Adiga <adiga.shreeganesh@ab-inbev.com>'
     })
   }
 
