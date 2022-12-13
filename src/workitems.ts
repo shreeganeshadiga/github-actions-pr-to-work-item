@@ -92,11 +92,7 @@ export async function create(env: EnvInputs, payload: Payload): Promise<IFetchRe
       path: '/fields/System.History',
       value: `GitHub <a href="${payload.url}" target="_new">Pull Request #${payload.number}</a> created in <a href="${payload.repo_url}" target="_new">${payload.repo_fullname}</a>`
     },
-    {
-      op: 'add',
-      path: '/fields/System.AssignedTo',
-      value: env.ado_assigned_to
-    },
+    
     {
       op: 'add',
       path: '/relations/-',
@@ -139,6 +135,14 @@ export async function create(env: EnvInputs, payload: Payload): Promise<IFetchRe
       op: 'add',
       path: '/fields/System.AreaPath',
       value: env.ado_area_path
+    })
+  }
+
+  if (env.ado_assigned_to !== '') {
+    patchDocument.push({
+      op: 'add',
+      path: '/fields/System.AssignedTo',
+      value: env.ado_assigned_to
     })
   }
 
