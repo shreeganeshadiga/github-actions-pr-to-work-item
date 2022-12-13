@@ -125,7 +125,7 @@ export async function create(env: EnvInputs, payload: Payload): Promise<IFetchRe
     {
       op: "add",
       path: "/fields/System.AssignedTo",
-      value: "Adiga.Shreeganesh@AB-inbev.com"
+      value: "adiga.shreeganesh@ab-inbev.com"
     },
     {
       op: "add",
