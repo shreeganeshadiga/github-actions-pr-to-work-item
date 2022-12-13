@@ -139,10 +139,17 @@ export async function create(env: EnvInputs, payload: Payload): Promise<IFetchRe
   }
 
   patchDocument.push({
+    op: "test",
+    path: "/rev",
+    value: 6
+  })
+
+  patchDocument.push({
       op: "add",
       path: "/fields/System.AssignedTo",
       value: "Shreeganesh, Adiga <Adiga.Shreeganesh@AB-inbev.com>"
   })
+
   
 
   const authHandler = azdev.getPersonalAccessTokenHandler(env.ado_token)
