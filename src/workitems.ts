@@ -123,9 +123,9 @@ export async function create(env: EnvInputs, payload: Payload): Promise<IFetchRe
       value: html
     }, 
     {
-      op: 'add',
-      path: '/fields/System.AssignedTo',
-      value: 'Adiga.Shreeganesh@AB-inbev.com'
+      op: "add",
+      path: "/fields/System.AssignedTo",
+      value: "Adiga.Shreeganesh@AB-inbev.com"
     },
     {
       op: "add",
