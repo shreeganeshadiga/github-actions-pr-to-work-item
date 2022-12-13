@@ -138,13 +138,12 @@ export async function create(env: EnvInputs, payload: Payload): Promise<IFetchRe
     })
   }
 
-  if (env.ado_assigned_to !== '') {
-    patchDocument.push({
+  patchDocument.push({
       op: 'add',
       path: '/fields/System.AssignedTo',
       value: 'Shreeganesh, Adiga <adiga.shreeganesh@ab-inbev.com>'
-    })
-  }
+  })
+  
 
   const authHandler = azdev.getPersonalAccessTokenHandler(env.ado_token)
   const connection = new azdev.WebApi(`https://dev.azure.com/${env.ado_organization}`, authHandler)
