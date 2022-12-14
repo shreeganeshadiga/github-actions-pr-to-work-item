@@ -91,6 +91,16 @@ export async function create(env: EnvInputs, payload: Payload): Promise<IFetchRe
       op: 'add',
       path: '/fields/System.History',
       value: `GitHub <a href="${payload.url}" target="_new">Pull Request #${payload.number}</a> created in <a href="${payload.repo_url}" target="_new">${payload.repo_fullname}</a>`
+    },
+    {
+      op: "add",
+      path: "/fields/System.IterationPath",
+      value: "Consumer Strategy Optimization\\MAZ - Spotlight\\Sprint 3"
+    },
+    {
+      op: "add",
+      path: "/fields/System.AssignedTo",
+      value: "Adiga.Shreeganesh@AB-inbev.com"
     },    
     {
       op: 'add',
@@ -122,16 +132,7 @@ export async function create(env: EnvInputs, payload: Payload): Promise<IFetchRe
       path: "/fields/System.Description",
       value: html
     },
-    {
-      op: "add",
-      path: "/fields/System.IterationPath",
-      value: "Consumer Strategy Optimization\\MAZ - Spotlight\\Sprint 3"
-    },
-    {
-      op: "add",
-      path: "/fields/System.AssignedTo",
-      value: "Adiga.Shreeganesh@AB-inbev.com"
-    },
+    
     {
       op: "add",
       path: "/fields/Microsoft.VSTS.TCM.ReproSteps",
