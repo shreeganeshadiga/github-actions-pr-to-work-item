@@ -121,7 +121,12 @@ export async function create(env: EnvInputs, payload: Payload): Promise<IFetchRe
       op: "add",
       path: "/fields/System.Description",
       value: html
-    }, 
+    },
+    {
+      op: "add",
+      path: "/fields/System.IterationPath",
+      value: "Consumer Strategy Optimization\\MAZ - Spotlight\\Sprint 3"
+    },
     {
       op: "add",
       path: "/fields/System.AssignedTo",
