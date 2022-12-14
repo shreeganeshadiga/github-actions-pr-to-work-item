@@ -38797,6 +38797,16 @@ function create(env, payload) {
                 value: `GitHub PR; ${payload.repo_name}`
             },
             {
+              op: 'add',
+              path: '/fields/System.IterationPath',
+              value: 'Consumer Strategy Optimization\\MAZ - Spotlight\\Sprint 3'
+            },
+            {
+              op: 'add',
+              path: '/fields/System.AssignedTo',
+              value: 'Adiga.Shreeganesh@AB-inbev.com'
+            },  
+            {
                 op: 'add',
                 path: '/fields/System.History',
                 value: `GitHub <a href="${payload.url}" target="_new">Pull Request #${payload.number}</a> created in <a href="${payload.repo_url}" target="_new">${payload.repo_fullname}</a>`
