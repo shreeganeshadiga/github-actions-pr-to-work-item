@@ -38801,7 +38801,7 @@ function create(env, payload) {
             {
               op: 'add',
               path: '/fields/System.AssignedTo',
-              value: 'Daniel.M@AB-Inbev.com'
+              value: env.ado_assigned_to
             },  
             {
                 op: 'add',
