@@ -85,7 +85,7 @@ export async function create(env: EnvInputs, payload: Payload): Promise<IFetchRe
     {
       op: 'add',
       path: '/fields/System.Tags',
-      value: `GitHub PR; ${payload.repo_name}`
+      value: `GitHub PR; ${payload.repo_name}; Lighthouse`
     },
     {
       op: 'add',
@@ -131,8 +131,7 @@ export async function create(env: EnvInputs, payload: Payload): Promise<IFetchRe
       op: "add",
       path: "/fields/System.Description",
       value: html
-    },
-    
+    },    
     {
       op: "add",
       path: "/fields/Microsoft.VSTS.TCM.ReproSteps",
