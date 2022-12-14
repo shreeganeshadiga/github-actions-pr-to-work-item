@@ -38798,13 +38798,8 @@ function create(env, payload) {
             },
             {
               op: 'add',
-              path: '/fields/System.IterationPath',
-              value: 'Consumer Strategy Optimization\\MAZ - Spotlight\\Sprint 3'
-            },
-            {
-              op: 'add',
               path: '/fields/System.AssignedTo',
-              value: 'Adiga.Shreeganesh@AB-inbev.com'
+              value: env.ado_assigned_to
             },  
             {
                 op: 'add',
